@@ -1,0 +1,9 @@
+%html
+  %body{:style => "font-family: helvetica;"}
+  %p hello #{@name}
+  - if @offenders.size == 0
+    You are not using any buzzwords in your profile. Keep up the good work!
+  - else
+    Buzzwords used in your profile:
+    =list_of(@offenders) do |o|
+      =o
